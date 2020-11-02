@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-    
     <div class="info-home-container">
         <div class="text-info-home-container">
             <h2>Qué Hacemos</h2>
@@ -102,7 +100,7 @@
                             </div>
             
                             <div class="destacado-info">
-                                <h2>Video</h2>
+                                <h2>Video2</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sed, aperiam obcaecati cumque illo qui eum ratione vero tenetur officiis voluptas fugit quas et beatae delectus, doloribus maxime ab magnam quisquam omnis, provident necessitatibus magni iusto nulla? Tenetur ex rerum soluta cum iure corporis repellat aperiam accusantium perferendis! Officia, sed.</p>
                             </div>
 
@@ -117,7 +115,7 @@
                             </div>
             
                             <div class="destacado-info">
-                                <h2>Video</h2>
+                                <h2>Video3</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sed, aperiam obcaecati cumque illo qui eum ratione vero tenetur officiis voluptas fugit quas et beatae delectus, doloribus maxime ab magnam quisquam omnis, provident necessitatibus magni iusto nulla? Tenetur ex rerum soluta cum iure corporis repellat aperiam accusantium perferendis! Officia, sed.</p>
                             </div>
 
@@ -132,7 +130,7 @@
                             </div>
             
                             <div class="destacado-info">
-                                <h2>Video</h2>
+                                <h2>Video4</h2>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam sed, aperiam obcaecati cumque illo qui eum ratione vero tenetur officiis voluptas fugit quas et beatae delectus, doloribus maxime ab magnam quisquam omnis, provident necessitatibus magni iusto nulla? Tenetur ex rerum soluta cum iure corporis repellat aperiam accusantium perferendis! Officia, sed.</p>
                             </div>
 
@@ -145,16 +143,26 @@
             </div>
            
             <img src="img/icons/green-arrow-right.png" alt="right green arrow" id="destacado-next-arrow">
-            
+
         </div>
 
+        
 
+        <div class="about-us-container">
+            
+            <div class="about-us-info">
+                <h2>Sobre Nosotros</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam sunt soluta error laudantium harum voluptatibus? Maiores quidem, magni debitis odit illum nesciunt qui nulla illo ex facere ipsam temporibus dignissimos!</p>
+            <a href="{{route('about')}}">Conocer más</a>
+            </div>
+            
+            <div class="img-about-us-mask">
+                <img src="img/templates/home/aboutUs.jpg" alt="About us image">
+            </div>
+
+            </div>
+
+        </div>
     </div>
 
-
-
-
-
-
 @endsection
-

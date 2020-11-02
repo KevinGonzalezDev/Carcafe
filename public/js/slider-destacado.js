@@ -10,6 +10,8 @@ addEventListener('DOMContentLoaded', () =>{
     next.addEventListener('click', siguiente);
     back.addEventListener('click', atras);
 
+    grupos[0].classList.add('displayed-flex');
+
     function siguiente(){
         counter++;
 
@@ -17,13 +19,13 @@ addEventListener('DOMContentLoaded', () =>{
             counter = grupos.length - 1;
         }
 
+        elementoAnterior = counter - 1;
+
+        grupos[elementoAnterior].classList.remove('displayed-flex');
         grupos[counter].classList.add('displayed-flex');
 
         console.log(counter);
-
-        setTimeout( () => {
-            grupos[counter].classList.remove('displayed-flex');
-        }, 1000);
+;
     }
 
     function atras(){
@@ -33,7 +35,10 @@ addEventListener('DOMContentLoaded', () =>{
             counter = 0;
         }
 
-        grupos[counter].classList.remove('displayed-flex');
+        elementoPosterior = counter + 1;
+
+        grupos[elementoPosterior].classList.remove('displayed-flex');
+        grupos[counter].classList.add('displayed-flex');
 
         console.log(counter);
 
