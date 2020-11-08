@@ -106,9 +106,9 @@
         </div>
 
         <div class="social-container">
-            <img src="img/icons/fb.png" alt="facebook image">
-            <img src="img/icons/ig.png" alt="instagram image">
-            <img src="img/icons/twitter.png" alt="twitter image">
+            <a href="#"> <img src="img/icons/fb.png" alt="facebook image"> </a>
+            <a href="#"> <img src="img/icons/ig.png" alt="instagram image"> </a>
+            <a href="#"> <img src="img/icons/twitter.png" alt="twitter image"> </a>
         </div>
     </div>
 
