@@ -16,5 +16,10 @@ use App\Http\Controllers;
 
 Route::get('/', 'App\Http\Controllers\AdminController@index')->name('raiz');
 
+Route::get('/{lang}', function ($lang) {
+    App::setlocale($lang);
+    return view('welcome');
+});
+
 Route::get('/welcome', 'App\Http\Controllers\AdminController@welcome')->name('welcome');
 Route::get('/about', 'App\Http\Controllers\AdminController@about')->name('about');
