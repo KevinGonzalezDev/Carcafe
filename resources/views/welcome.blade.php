@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="info-home-container">
+    <div class="main-container">
         <div class="text-info-home-container">
             <h2>{{ __('Qué Hacemos')}}</h2>
             <article>

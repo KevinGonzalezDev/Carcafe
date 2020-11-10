@@ -1,12 +1,23 @@
 {
   "Home": "Inicio",
-  "Sómos Carcafe": "Sómos Carcafe ▼",
+  "Sómos Carcafe": "Sómos Carcafe",
   "Nuestro Aporte": "Nuestro Aporte",
-  "Compramos su café": "Compramos su café ▼",
+  "Compramos su café": "Compramos su café",
   "Producto": "Producto",
   "Trabaja con nosotros": "Trabaja con nosotros",
   "Somos el mejor aliado en café": "Somos el mejor aliado en café",
   "en Colombia.": "en Colombia.",
   "Quienes Somos": "Quienes Somos",
-  "Qué Hacemos": "Qué Hacemos"
+  "Qué Hacemos": "Qué Hacemos",
+  "Nuestro equipo": "Nuestro equipo",
+  "Conoce nuestra casa matriz": "Conoce nuestra casa matriz",
+  "Equipo de calidad": "Equipo de calidad",
+
+  "Misión": "Misión",
+  "Vision": "Visión",
+  "Nuestros Valores": "Nuestros Valores",
+
+  "Texto-mision": "Ser el aliado líder de café en Colombia con la mejor combinación de producto y servicio, generando confianza y asegurando resultados sostenibles para sus accionistas, colaboradores y comunidades con las que interactúa",
+  "Texto-vision": "Consolidarse como el mejor aliado de café en Colombia, contribuyendo a la construcción de una caficultura sostenible donde se mejore la calidad de vida de los productores, operadores, clientes y consumidores del mundo, con un portafolio de productos y servicios que satisfacen sus necesidades.",
+  "Texto-valores": "Nuestros valores se encuentran inmersos en cada acción de quienes día a día hacemos parte de Carcafe."
 }
