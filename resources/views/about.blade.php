@@ -1,6 +1,10 @@
 @extends('layout.general')
 
 @section('content')
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKEgETPo4kJvx2voMi9i60eAzPlzq-LAU&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
 
 <div class="main-container">
 
@@ -11,7 +15,7 @@
                 <h2>{{__('Misión')}}</h2>
                 <img src="img/templates/about/mision.jpg" alt="mision image">
             </span>
-        <p>{{__('Texto-mision')}}</p>            
+        <p>{{__('Texto-mision')}}</p>
         </div>
 
         <div>
@@ -19,7 +23,7 @@
             <h2>{{__('Visión')}}</h2>
                 <img src="img/templates/about/vision.jpg" alt="vision image">
             </span>
-            <p>{{__('Texto-vision')}}</p>            
+            <p>{{__('Texto-vision')}}</p>
         </div>
 
         <div>
@@ -27,10 +31,10 @@
             <h2>{{__('Nuestros Valores')}}</h2>
                 <img src="img/templates/about/valores.jpg" alt="valores image">
             </span>
-        <p>{{__('Texto-valores')}}</p>            
+        <p>{{__('Texto-valores')}}</p>
         </div>
     </div>
-    
+
 
     <div class="history-container">
         <div class="history-info-container">
@@ -46,7 +50,7 @@
             <span id="full-line"></span>
 
             <div id="history-block1" class="history-blocks">
-                
+
                 <div>
                     <a href="#"></a>
                     <h2>1998</h2>
@@ -87,7 +91,8 @@
 
 
         <div class="map-about-container">
-            <img src="img/templates/about/map.png" alt="Map image">
+
+            <div id="map"></div>
 
             <div class="info-map-about-container">
                 <h2>¿Dónde Encontrarnos?</h2>
@@ -224,5 +229,123 @@
 
 
 </div>
+<script>
+// Initialize and add the map
+
+const markers = [];
+
+function initMap() {
+
+  const blue_dot = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
+  const red_dot = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
+  const green_dot = "http://maps.google.com/mapfiles/ms/icons/green-dot.png";
+
+  // The location of sale points
+  const sale_points = [];
+  const santa_marta = { lat: 11.206068, lng: -74.195228 };
+  sale_points.push(santa_marta);
+  const san_gil = { lat: 6.553854, lng: -73.153399 };
+  sale_points.push(san_gil);
+  const andes = { lat: 5.659291, lng: -75.878335 };
+  sale_points.push(andes);
+  const ciudad_bolivar = { lat: 5.847499, lng: -76.014279 };
+  sale_points.push(ciudad_bolivar);
+  const jardin = { lat: 5.599963, lng: -75.826023 };
+  sale_points.push(jardin);
+  const pereira = { lat: 4.810281, lng: -75.751351 };
+  sale_points.push(pereira);
+  const pacho = { lat: 5.132444, lng: -74.157078 };
+  sale_points.push(pacho);
+  const fresno = { lat: 5.152581, lng: -75.042028 };
+  sale_points.push(fresno);
+  const popayan = { lat: 2.447003, lng: -76.604487 };
+  sale_points.push(popayan);
+  const garzon = { lat: 2.196593, lng: -75.628507 };
+  sale_points.push(garzon);
+  const pitalito = { lat: 1.843199, lng: -76.066309 };
+  sale_points.push(pitalito);
+  const la_union = { lat: 1.607608, lng: -77.132905 };
+  sale_points.push(la_union);
+  const taminango = { lat: 1.570711, lng: -77.282840 };
+  sale_points.push(taminango);
+  const cosaca = { lat: 1.208069, lng: -77.463079 };
+  sale_points.push(cosaca);
+
+  // The location of main thresher
+  const threshers = [];
+  const amaga = { lat: 6.032364, lng: -75.688729 };
+  threshers.push(amaga);
+  const cartago = { lat: 4.656547, lng: -74.058102 };
+  threshers.push(cartago);
+  const bogota = { lat: 4.609237, lng: -74.083996 };
+  threshers.push(bogota);
+  const neiva = { lat: 2.909590, lng: -75.285177 };
+  threshers.push(neiva);
+  const pasto = { lat: 1.232744, lng: -77.296838 };
+  threshers.push(pasto);
+
+  // The location of main office
+  const bogotaMO = { lat: 4.656547, lng: -74.058102 };
+
+  // The location of map
+  const colombia = { lat: 4.5709, lng: -74.2973 };
+
+
+
+  // The map, centered at Colombia
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 5.6,
+    center: colombia,
+  });
+
+  const marker1 = new google.maps.Marker({
+      position: bogotaMO,
+      map: map,
+    });
+    markers.push(marker1);
+
+  for (index = 0; index < sale_points.length; index++) {
+    const marker = new google.maps.Marker({
+        position: sale_points[index],
+        map: map,
+        icon: {
+          url: blue_dot
+        }
+      });
+      markers.push(marker);
+    //console.log(array[index]);
+  }
+
+  for (index = 0; index < threshers.length; index++) {
+    const marker = new google.maps.Marker({
+        position: threshers[index],
+        map: map,
+        icon: {
+          url: green_dot
+        }
+      });
+      markers.push(marker);
+    //console.log(array[index]);
+  }
+
+    markers[0].setAnimation(google.maps.Animation.BOUNCE);
+
+
+
+
+
+
+  // The marker, positioned at Uluru
+/*  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+    icon: {
+      url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+    }
+  });
+*/
+
+}
+</script>
 
 @endsection

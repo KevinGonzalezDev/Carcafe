@@ -171,7 +171,7 @@ ul{
 
 .img-hero-mask{
     height: 100%;
-    overflow: hidden;  
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -412,7 +412,7 @@ ul{
     margin: auto;
 }
 
-.img-slider-home-container img{    
+.img-slider-home-container img{
     width: 100%;
 }
 
@@ -514,7 +514,7 @@ ul{
 
 .about-us-info h2{
     font-size: var(--main-font-size-subtitulos);
-    font-family: var(--main-font-family-black);   
+    font-family: var(--main-font-family-black);
     margin-bottom: 1em;
 }
 
@@ -861,4 +861,11 @@ ul{
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 700px;
+  /* The height is 400 pixels */
+  width: 45%;
+  /* The width is the width of the web page */
 }
