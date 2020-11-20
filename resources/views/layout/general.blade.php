@@ -69,7 +69,7 @@
 
             </li>
 
-                <li><a href="#">{{ __('Nuestro Aporte')}}</a></li>
+        <li><a href="{{route('ourContribution')}}" @if(Request::url() == route('ourContribution')) class="selected" @endif>{{ __('Nuestro Aporte')}}</a></li>
 
                 <li class="link-with-arrow">
 
@@ -143,6 +143,8 @@
             <img src="img/templates/banners/about.jpg" alt="about banner">
             @elseif(Request::url() == route('ourTeam'))
             <img src="img/templates/banners/ourTeam.jpg" alt="about banner">
+            @elseif(Request::url() == route('ourContribution'))
+            <img src="img/templates/banners/ourContribution.jpg" alt="about banner">
             @endif
             <span></span>
         </div>
@@ -162,6 +164,13 @@
                     <h2>{{ __('Nuestro equipo')}}</h2>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
+                @elseif(Request::url() == route('ourContribution'))
+
+                <div class="title-main-container">
+                    <h2>{{ __('Nuestro Aporte')}}</h2>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+
 
                 @endif
             </div>

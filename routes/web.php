@@ -20,3 +20,4 @@ Route::get('/welcome', 'App\Http\Controllers\AdminController@welcome')->name('we
 Route::get('/about', 'App\Http\Controllers\AdminController@about')->name('about');
 Route::get('/we', 'App\Http\Controllers\AdminController@we')->name('we');
 Route::get('/ourTeam', 'App\Http\Controllers\AdminController@ourTeam')->name('ourTeam');
+Route::get('/ourContribution', 'App\Http\Controllers\AdminController@ourContribution')->name('ourContribution');
