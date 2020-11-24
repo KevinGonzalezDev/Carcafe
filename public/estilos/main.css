@@ -216,7 +216,7 @@ ul{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: end;
+    justify-content: flex-end;
     background-color: var(--main-green-color);
     width: 100%;
     padding: 1rem 0 1rem 0;
@@ -238,20 +238,47 @@ ul{
 }
 
 .button-container{
-    display: none;
+    display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-right: 15rem;
     width: 150px;
     background: var(--main-white-color);
     border-radius: 25px;
-    padding: .2em 2em .2em 2em;
+    padding: .8em 2em .8em 2em;
+    margin-right: 2em;
 }
 
-.button-container::after{
-    content:"\025be";
-    cursor: pointer;
+.show-actually-language li{
+    font-family: var(--main-font-family-strong);
+    font-size: var(--main-font-size-parrafos);
 }
+
+.dropdown-container{
+    position: absolute;
+    background-color: #fff;
+    padding: 1em;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+
+.dropdown-container li a{
+    color: var(--main-gray-color);
+    text-align: center;
+    font-family: var(--main-font-family-light);
+    font-size: var(--main-font-size-parrafos);
+}
+
+.dropdown-container li{
+    padding: .4em;
+    border-bottom: 1px solid var(--main-gray-color);
+    width: 100%;
+}
+
 
 .hero-container{
     position: relative;
@@ -357,6 +384,10 @@ ul{
 .social-links-container{
     display: flex;
     flex-wrap: nowrap;
+}
+
+.subMenuOpen{
+    cursor: pointer;
 }
 
 .sub-menus{
@@ -1041,4 +1072,36 @@ ul{
   /* The height is 400 pixels */
   width: 45%;
   /* The width is the width of the web page */
+}
+
+
+.img-slider-indicators-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.indicators-container-block{
+
+    bottom: 0;
+    margin-bottom: 2em;
+}
+
+.img-slider-indicators-container span{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.img-slider-indicators-container span img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
 }

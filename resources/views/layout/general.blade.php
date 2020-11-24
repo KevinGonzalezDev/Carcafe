@@ -12,11 +12,12 @@
     <div class="header">
         <div class="language-container">
             <div class="button-container">
-                <ul class="navbar-nav ml-auto">
+
                   @php $locale = session()->get('locale'); @endphp
-                <li class="nav-item dropdown">
-                  <a href="#">
-                     @switch($locale)
+
+                  <ul class="show-actually-language">
+                    <li>
+                        @switch($locale)
                          @case('en')
                          Inglés
                          @break
@@ -25,18 +26,19 @@
                          @break
                          @default
                          Español
-                     @endswitch
-                     <span class="caret"></span>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="locale/en"> Inglés</a>
-                      <a class="dropdown-item" href="locale/es"> Español</a>
-                  </div>
-                </li>
+                        @endswitch
+
+                        <span class="subMenuOpen" data-numero="3">⯆</span>
+
+                        <ul class="dropdown-container" id="sub-menu3">
+                            <li><a class="dropdown-item" href="locale/en">Inglés</a></li>
+                            <li><a class="dropdown-item" href="locale/es">Español</a></li>
+                        </ul>
+
+                    </li>
                 </ul>
-
-
             </div>
+            
 
         </div>
 
@@ -79,9 +81,9 @@
 
                 <div class="sub-menu-container">
                     <ul id="sub-menu2" class="sub-menus">
-                        <li><a href="#"> Donde compramos su café </a></li>
-                        <li><a href="#"> Comercinates </a></li>
-                        <li><a href="#"> Caficultores </a></li>
+                        <li><a href="#"> {{__('Donde compramos su café')}} </a></li>
+                        <li><a href="#"> {{__('Comerciantes')}} </a></li>
+                        <li><a href="#"> {{__('Caficultores')}} </a></li>
                     </ul>
                 </div>
 
@@ -209,5 +211,6 @@
     <script src="js/slider-home.js"></script>
     <script src="js/slider-ourteam.js"></script>
     <script src="js/slider-destacado.js"></script>
+    <script src="js/slideshow-blocks.js"></script>
 </body>
 </html>

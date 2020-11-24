@@ -32,6 +32,9 @@
                 case 1:
                     mostrar(flechita[i].getAttribute('data-numero'));
                     break;
+                case 3:
+                    mostrar(flechita[i].getAttribute('data-numero'));
+                    break;
             }
 
         });
