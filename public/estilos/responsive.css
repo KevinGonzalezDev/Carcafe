@@ -1,0 +1,67 @@
+
+
+@media screen and (max-width:1600px){
+    :root{
+        --main-font-size-titulos:34px;
+        --main-font-size-subtitulos:23px;
+        --main-font-size-parrafos-grandes:21px;
+        --main-font-size-parrafos:16px;
+        --main-font-size-parrafos-pequeños:14px;
+    }
+
+    .main-container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:1440px){
+    :root{
+        --main-font-size-titulos:34px;
+        --main-font-size-subtitulos:23px;
+        --main-font-size-parrafos-grandes:21px;
+        --main-font-size-parrafos:16px;
+        --main-font-size-parrafos-pequeños:13px;
+    }
+
+    .menu-container{
+        width: 90%;
+        margin: 3em 3em 0 0;
+    }
+
+    #logotipo{
+        width: 200px;
+    }
+
+}
+
+
+@media screen and (max-width:1360px){
+    .footer-container{
+        padding: 5em 4em 5em 4em;
+    }
+
+    .social-container a img{
+        width: 25px;
+    }
+}
+
+@media screen and (max-width:1280px){
+
+    :root{
+        --main-font-size-titulos:32px;
+        --main-font-size-subtitulos:20px;
+        --main-font-size-parrafos-grandes:18px;
+        --main-font-size-parrafos:14px;
+        --main-font-size-parrafos-pequeños:12px;
+    }
+
+    .hero-container{
+        height: 700px;    
+    }
+
+    .footer-container{
+        padding: 5em;
+    }
+
+
+}

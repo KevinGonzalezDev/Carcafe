@@ -18,4 +18,16 @@ class AdminController extends Controller
     public function about(){
         return view('about');
     }
+
+    public function we(){
+        return view('we');
+    }
+
+    public function ourTeam(){
+        return view('ourTeam');
+    }
+
+    public function ourContribution(){
+        return view('ourContribution');
+    }
 }
